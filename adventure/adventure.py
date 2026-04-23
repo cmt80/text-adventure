@@ -1,6 +1,6 @@
 # setting up the inventory/hp for the start of the game
 inventory = {
-    "HP": 5,
+    "HP": 7,
     "Weapon": "fists",
     "Key": "no",
 }
@@ -209,15 +209,12 @@ if choice == "1":
 
             flee_choice = choose()
 
-            if flee_choice == "1" or "2":
+            if flee_choice == "1" or flee_choice == "2":
                 print("With no other option left, you just run out of\n" \
                 "the room. You leave your staff behind in exchange for\n" \
                 "your life.")
                 print("[Staff has been removed from inventory]")
             
-
-
-
 
 
     print("\n")
@@ -242,7 +239,7 @@ if choice == "1":
 
     elif chest_choice == "2":
         # if the player doesnt have a weapon
-        if inventory["Weapon"] == "fists" or "Sword":
+        if inventory["Weapon"] == "fists" or inventory["Weapon"] == "Sword":
             print("Upon slightly closer inspection, you notice that the\n" \
             "chest is on a pedestal. There is a bridge that can allow you to\n" \
             "reach it, but approaching it from any other angle would cause you to\n" \
